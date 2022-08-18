@@ -25,16 +25,15 @@
         "baseUrl": ".",
         "paths": {
             "@*": ["*"],
+            "@/*": ["src/*"],
             "@config/*": ["src/config/*"],
             "@controllers/*": ["src/controllers/*"],
-            "@docs/*": ["src/docs/*"],
             "@exceptions/*": ["src/exceptions/*"],
             "@global": ["src/global.d.ts"],
             "@interfaces/*": ["src/interfaces/*"],
             "@middlewares/*": ["src/middlewares/*"],
             "@models/*": ["src/models/*"],
             "@routes/*": ["src/routes/*"],
-            "@/*": ["src/*"],
             "@utils/*": ["src/utils/*"]
         }
     }

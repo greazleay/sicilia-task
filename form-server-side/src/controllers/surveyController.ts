@@ -77,7 +77,7 @@ class SurveyController {
 
                 await newSurvey.save();
 
-                res.json({ status: 'success', message: 'Your response has been recorded' })
+                res.json({ status: 'success', message: 'survey saved' })
 
             } catch (err: any) {
 

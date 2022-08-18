@@ -1,11 +1,11 @@
 import express, { NextFunction, Request, Response } from 'express';
+import compression from 'compression';
 import cookieParser from 'cookie-parser';
+import cors, { CorsOptions } from 'cors'
 import createHttpError from 'http-errors';
+import helmet from 'helmet';
 import morgan from 'morgan';
 import { config } from 'dotenv';
-import cors, { CorsOptions } from 'cors'
-import helmet from 'helmet';
-import compression from 'compression';
 import { HttpException } from '@exceptions/HttpException'
 
 // Import Configs
@@ -20,9 +20,7 @@ config();
 initDB();
 
 const app = express();
-const whitelist = [
-    'http://localhost:3000',
-];
+const whitelist = ['http://localhost:4000', 'http://localhost:3000'];
 export const corsOptions: CorsOptions = {
     credentials: true,
     methods: ['GET', 'DELETE', 'OPTIONS', 'POST', 'PUT', 'PATCH'],
