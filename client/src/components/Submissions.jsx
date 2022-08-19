@@ -57,35 +57,49 @@ export const Submissions = () => {
         >
             {loading
 
-                ? <div className="h-full p-6 overflow-auto rounded-lg lg:w-3/5 bg-pwgreen sm:w-screen">
-                    <h2>Loading, Please Wait .........</h2>
+                ? <div className="flex items-center justify-center h-full overflow-auto rounded-lg lg:w-3/5 bg-pwgreen sm:w-screen">
+                    <div className="border border-blue-300 shadow rounded-md p-4 max-w-sm w-full mx-auto">
+                        <div className="animate-pulse flex space-x-4">
+                            <div className="rounded-full bg-slate-200 h-10 w-10"></div>
+                            <div className="flex-1 space-y-6 py-1">
+                                <div className="h-2 bg-slate-200 rounded"></div>
+                                <div className="space-y-3">
+                                    <div className="grid grid-cols-3 gap-4">
+                                        <div className="h-2 bg-slate-200 rounded col-span-2"></div>
+                                        <div className="h-2 bg-slate-200 rounded col-span-1"></div>
+                                    </div>
+                                    <div className="h-2 bg-slate-200 rounded"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 : <div className="h-full p-6 overflow-auto rounded-lg lg:w-3/5 bg-pwgreen scroll-smooth scrollbar sm:w-screen">
 
-                    <h3 className='text-4xl text-center'>
+                    <h3 className='text-4xl text-center underline underline-offset-8'>
                         FORM SUBMISSION REPORT
                     </h3>
 
-                    <table className='w-full text-left mt-10'>
+                    <table className='w-full text-left mt-10 table-auto border-collapse border-2 whitespace-normal'>
                         <thead>
                             <tr>
-                                <th>S/N</th>
-                                <th>Full Name</th>
-                                <th>Email Address</th>
-                                <th>Country</th>
-                                <th>Submission Date</th>
+                                <th className='border-2 border-slate-300 bg-neutral-500'>S/N</th>
+                                <th className='border-2 border-slate-300 bg-neutral-500'>Full Name</th>
+                                <th className='border-2 border-slate-300 bg-neutral-500'>Email Address</th>
+                                <th className='border-2 border-slate-300 bg-neutral-500'>Country</th>
+                                <th className='border-2 border-slate-300 bg-neutral-500'>Submission Date</th>
                             </tr>
                         </thead>
                         <tbody>
                             {submissions.map((submission, index) => {
                                 return (
                                     <tr key={index}>
-                                        <td>{index + 1}</td>
-                                        <td>{submission.name}</td>
-                                        <td>{submission.email}</td>
-                                        <td>{submission.country}</td>
-                                        <td>{new Date(submission.createdAt).toLocaleString()}</td>
+                                        <td className='border border-slate-300'>{index + 1}.</td>
+                                        <td className='border border-slate-300'>{submission.name}</td>
+                                        <td className='border border-slate-300'>{submission.email}</td>
+                                        <td className='border border-slate-300'>{submission.country}</td>
+                                        <td className='border border-slate-300'>{new Date(submission.createdAt).toLocaleString()}</td>
                                     </tr>
                                 )
                             })}
