@@ -1,0 +1,49 @@
+{
+  "name": "form-client-side-server",
+  "version": "0.0.0",
+  "engines": {
+    "node": ">=16.15.1"
+  },
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "@tsconfig/node16": "^1.0.2",
+    "@types/compression": "^1.7.2",
+    "@types/cookie-parser": "^1.4.2",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/http-errors": "^1.8.2",
+    "@types/luxon": "^2.0.9",
+    "@types/morgan": "^1.9.3",
+    "@types/multer": "^1.4.7",
+    "@types/node": "^18.7.6",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "envalid": "^7.2.2",
+    "express": "^4.18.1",
+    "express-validator": "^6.14.0",
+    "helmet": "^5.0.2",
+    "http-errors": "^2.0.0",
+    "luxon": "^2.4.0",
+    "module-alias": "^2.2.2",
+    "mongoose": "^6.4.3",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "multer-gridfs-storage": "^5.0.2",
+    "ts-node": "^10.9.1",
+    "tsc-alias": "^1.6.11",
+    "tsconfig-paths": "^4.0.0",
+    "typescript": "^4.7.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19",
+    "supertest": "^6.2.4",
+    "ts-node-dev": "^2.0.0"
+  },
+  "scripts": {
+    "start": "ts-node -r tsconfig-paths/register src/index.ts",
+    "dev": "ts-node-dev -r tsconfig-paths/register src/index.ts"
+  }
+}
